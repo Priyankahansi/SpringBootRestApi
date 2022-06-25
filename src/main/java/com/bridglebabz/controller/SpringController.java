@@ -1,5 +1,6 @@
 package com.bridglebabz.controller;
 
+import com.bridglebabz.entity.User;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -27,6 +28,14 @@ public class SpringController {
         return "hello" + " " + name + " " + "..!";
     }
 
+    @PostMapping("/share")
+    public String shared(@RequestBody String name) {
+        return "hello" + " " + name + " " + "..!";
+    }
+    @PostMapping("/shared")
+    public String sharing(@RequestBody User user) {
+        return "hello" + " " + user.getFirstname() + " " + user.getLastname()+ " " + "..!";
+    }
 }
 
 
