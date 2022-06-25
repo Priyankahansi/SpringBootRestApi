@@ -26,4 +26,10 @@ public class SpringController {
     public String share(@RequestParam String name) {
         return "hello" + " " + name + " " + "..!";
     }
+
 }
+
+
+
+
+
